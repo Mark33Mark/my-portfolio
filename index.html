@@ -1,15 +1,56 @@
-<!--
+<!-- ---------------------------------------------------------------------------------------
+  USYD Coding Bootcamp - Unit 2 Homework Assignment
+  My Portfolio Webpage
 
-		
+  Note: Prior to commencing the course I created and went live with a portfolio 
+        based website.  For this exercise I decided to stick to the brief and 
+        reasonably strictly follow the example webpage in style / layout.
+        I tried to have some fun with this and now think I prefer this version
+        over my current live one:  https://www.watsonised.com
+--------------------------------------------------------------------------------------------
 -->
+
 <!doctype html >
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Mark Watson | web developer</title>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+		<title>Mark Watson | Watsonised | developer</title>
+		<meta name="description" content="Mark Watson - developer and creator in the digital realm - web and devices" />  
+		<meta name="author" content="Mark Watson" />
+		<meta name="KEYWORDS" content="front end web developer, front-end web developer, full stack developer, 
+                                    social media, graphic design, analysis, database, 
+                                    e-commerce, website, web design, web designer, grahic design  
+                                    ui designer, ux designer, ui, ux, 
+                                    curriculum vitae web developer, resume web developer" />
+
+    <!-- Open Graph data
+    ================================================== -->
+    <meta property="og:title" content="Mark Watson" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.watsonised.com/content/SVG_MarkWatson.svg" />
+    <meta property="og:image:width" content="150" />
+    <meta property="og:image:height" content="150" />
+    <meta property="og:site_name" content="Mark Watson web developer"/>
+    <meta property="og:description" content="Mark Watson is a creative and talented computer programmer and web developer." />
+
+    <!-- CSS
+   	================================================== -->                              
     <link rel="stylesheet" type="text/css" href="css/stylesheet-foundation.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     
+    <!-- mobile specific metas
+    ================================================== -->
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	   <!-- favicons
+		================================================== -->
+		<link rel="shortcut icon" href="img/favicon.ico?ver=1.0" type="image/x-icon" />
+		<link rel="icon" href="img/favicon.ico?ver=1.0" type="image/x-icon" />
+
+    <!-- typefaces and fonts
+		================================================== -->
     <!-- Google Fonts - for some reason Tourney wouldn't load when declaringi via @import method in the 
          CSS folder. Tried to problem solve it but ended up declaring here.  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +59,7 @@
           rel="stylesheet">
   </head>
 
-  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <!-- +++ navigation bar +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
   <body id="top-of-website">
     <div class="header-container">
@@ -27,13 +68,15 @@
         <div class="name-tag-bg">
           <a href="#"><div class="name-tag">Mark Watson</div></a>
         </div>
-
-        <ul>
-          <li><a href="#top-of-website">Who & Why</li></a>
-          <li><a href="#what-portfolio"> What </li></a>
-          <li><a href="#resume">Wow (resume)</li></a>
-          <li><a href="#when-and-how">When & How</li></a>
-        </ul>
+        
+        <div class= "nav-menu">
+          <ul>
+            <li><a href="#top-of-website">Who & Why</li></a>
+            <li><a href="#what-portfolio"> What </li></a>
+            <li><a href="#resume">Wow (resume)</li></a>
+            <li><a href="#when-and-how">When & How</li></a>
+          </ul>
+        </div>
       </nav>
 
       <header>
@@ -176,7 +219,8 @@
                device.
             </p>
 
-            <a href="https://watsonised.com/content/MarkWatson_Resume.pdf" target="_blank">
+            <a href="https://watsonised.com/content/MarkWatson_Resume.pdf" target="_blank" 
+               aria-label="download my resume by selecting this icon or use a QR scanning device to scan the QR code to download my resume.">
               <div class="QR-code"></div>
             </a>
           </section>
@@ -208,20 +252,21 @@
 
                 <div class="empty-cell-1-1"></div>
 
-                <a href="mailto:info@watsonised.com?subject=Sending%20you%20this%20email%20from%20your%20website&body=Hi%20Mark,%20I'm%20emailing%20you%20from%20your%20website.">
+                <a href="mailto:info@watsonised.com?subject=Sending%20you%20this%20email%20from%20your%20website&body=Hi%20Mark,%20I'm%20emailing%20you%20from%20your%20website." 
+                   aria-label="send me an email by selecting this icon">
                     info@watsonised.com</a>
               </div>
             
               <address class="social-network">       
-                <a href="https://www.linkedin.com/in/mark-watsonised/" target="_blank"><div class="icon-SVG_Linkedin"></div></a>
+                <a href="https://www.linkedin.com/in/mark-watsonised/" target="_blank" aria-label="have a look at my LinkedIn message and contact me by selecting this icon"><div class="icon-SVG_Linkedin"></div></a>
                 <a href="https://wa.me/61448488884?text=Hi%20Mark,%0DI%20found%20you%20via%20your%20website%20and%20was%20wondering%0D" 
-                         target="_blank"><div class="icon-SVG_Whatsapp"></div></a>  <!--https://faq.whatsapp.com/general/chats/how-to-use-click-to-chat-->
+                         target="_blank" aria-label="send me a whatsapp message by selecting this icon"><div class="icon-SVG_Whatsapp"></div></a>  <!--https://faq.whatsapp.com/general/chats/how-to-use-click-to-chat-->
 
-                <a href="https://t.me/watsonised" target="_blank">
+                <a href="https://t.me/watsonised" target="_blank" aria-label="send me a Telegram message by selecting this icon">
                      <div class="icon-SVG_PaperPlane"></div>
                 </a>
 
-                <a href="https://github.com/Mark33Mark" target="_blank"><div class="icon-SVG_Github"></div></a> 
+                <a href="https://github.com/Mark33Mark" target="_blank" aria-label="have a look at my Github repository by selecting this icon"><div class="icon-SVG_Github"></div></a> 
               </address>
 
           </section>

@@ -138,6 +138,7 @@ nav{
   flex: 0 1 100%;
   width:100%;
   height: 7rem;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -181,6 +182,8 @@ nav li>a:hover{
 }
 
 header { 
+  flex: 1;
+
   display:flex;
   flex-direction: row-reverse;
   align-content: flex-end;
@@ -405,7 +408,7 @@ a:link {
 .a-picture-of-me{
   flex: 0 1 60%;
   height: 40rem;
-  background-image: url(../img/Me_210828.png);
+  background-image: url(../img/PNG_Me_210828_modded.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: right;
@@ -414,7 +417,7 @@ a:link {
 .a-picture-of-me:hover{
   flex: 0 1 60%;
   height: 40rem;
-  background-image: url(../img/Me_behind_210828.png);
+  background-image: url(../img/PNG_behind_210828_modded.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: right;
@@ -447,18 +450,20 @@ a:link {
 
 .lead-image{
   flex: 0 1 70%;
+  text-align: center;
   margin: 3rem 0 1rem 3.5rem;
+}
+
+.lead-image img{
+  flex: 1 1 70%;
+  width: 72vw;
+  height: auto;
+  max-height: 40rem;
+  opacity: 0.7;
   color:var(--chocolate);
   border-style: solid;
   border-width: 0.25rem;
   border-spacing: 2rem;
-}
-
-.lead-image img{
-  flex: 0 1 40%;
-  width: 75vw;
-  height: auto;
-  opacity: 0.7;
 }
 
 .lead-image img:hover{
@@ -483,7 +488,7 @@ a:link {
 }
 
 .cube-container{
-	margin: 5rem 1rem 7rem 5rem;
+	margin: 6rem 1rem 7rem 5rem;
 	perspective: 150vw;
 	perspective-origin: 150% 200%;
 }
@@ -516,7 +521,8 @@ a:link {
 .img-label{
   position: fixed;
   margin: 21rem 0 0 -11.5rem;
-  background-color: var(--sand-light);
+  background-color: var(--bright-blue);
+  color: var(--paper);
   padding: 0.5rem;
 }
 
@@ -611,13 +617,9 @@ a:link {
   opacity: var(--opacity);
 }
 
-.panel-of-buttons{
-  text-align: center;
-}
-
 button {
-  padding: 0.5rem 0.25rem;
-  margin: 2rem 0 1.5rem 1rem;
+  padding: 0.5rem 0.5rem;
+  margin: 2rem 2.5rem 2rem 2.5rem;
   font-size: 1.2rem;
   width: 5.5rem;
   cursor: pointer;
@@ -859,13 +861,27 @@ a[href^="mailto"]{
     --cubeSize:     20rem;
   }
 
+  html {
+    display: flex;
+    width: 100%;
+  }
+
   .img-label{
     margin: 16rem 0 0 -9rem;
   }
   
-  body {
-    flex-wrap: wrap;
-    flex-direction: column;
+  .header-container{
+   flex: 1 1 100%;
+  }
+
+  .name-tag-bg{
+    flex: 0 1 100%
+    margin: 0 1.5rem 0 1.5rem;
+  }
+ 
+
+  .nav-menu ul a{
+    font-size: 1.1rem;;
   }
 
   .title-block{
@@ -874,9 +890,13 @@ a[href^="mailto"]{
     border-style: none none solid none;
     font-size: 0.9rem;
   }
-  
+
   .header-wrapper{
     margin: 0 0 2rem 0;
+  }
+
+  .header-wrapper>h2{
+    font-size: 1.2rem;
   }
 
   #who-and-why{
@@ -933,6 +953,11 @@ a[href^="mailto"]{
     flex-direction: column;
   }
 
+  .picture-gallery{
+    flex: 0 1 60%;
+    margin: 5rem 0 0 0;
+  }
+
   .what-portfolio{
     flex: 0 1 15%;
   }
@@ -940,6 +965,16 @@ a[href^="mailto"]{
   .what-portfolio>h2{
     height: 2rem;
   }
+
+  .cube-container{
+    margin: 5rem 0.5rem 7rem 0.5rem;
+    perspective: 400vw;
+  }
+  
+  .cube div {
+    padding: 0;
+  }
+
 
   #resume{
     flex-direction: column;
@@ -963,9 +998,20 @@ a[href^="mailto"]{
   }
 
   .social-network{
-    flex: 0 0 50%;
+    flex: 0 1 20%;
     align-items: center;
-    margin: 0 0 10rem 0; 
+    margin: 0 0 5rem 0; 
+    height: 8rem;
+  }
+
+  .social-network a div{
+    font-size: 2rem;
+  }
+
+  footer{
+    flex: 0 1 10%;
+    margin: 3rem 0 0 0;
+    min-height: 5rem;
   }
 
 }
@@ -975,7 +1021,6 @@ a[href^="mailto"]{
   .title-block{
     font-size: 1.1rem;
   }
-
 
   body .empty-block{
     height: 0;
