@@ -124,6 +124,10 @@ aside {
   padding: 1rem;
 }
 
+ul{
+  padding-inline-start: 0;
+}
+
 
 /* ========================================================================= */
 .header-container{
@@ -318,6 +322,7 @@ a:link {
   flex-wrap: wrap;
   justify-content: space-evenly;
   height: 8rem;
+  margin: 3rem 0 0 0;
   padding-right: 1rem;
 
 }
@@ -369,7 +374,7 @@ a:link {
 
 .c{
   flex: 0 1 3rem;
-  height: 3rem;
+  height: 3.2rem;
   width: 3rem;
   background-image: url(../img/SVG_c_logo.svg);
   background-size: cover;
@@ -450,6 +455,7 @@ a:link {
 
 .lead-image{
   flex: 0 1 70%;
+  position: relative;
   text-align: center;
   margin: 3rem 0 1rem 3.5rem;
 }
@@ -459,7 +465,7 @@ a:link {
   width: 72vw;
   height: auto;
   max-height: 40rem;
-  opacity: 0.7;
+  opacity: 1;
   color:var(--chocolate);
   border-style: solid;
   border-width: 0.25rem;
@@ -467,7 +473,16 @@ a:link {
 }
 
 .lead-image img:hover{
-  opacity: 1;
+  opacity: 0.65;
+}
+
+.lead-image-label{ 
+  position: absolute;
+  background-color: var(--chocolate);
+  color: var(--paper);
+  padding: 0.25rem;
+  bottom: 1rem;
+  left: 1rem;
 }
 
 .picture-gallery{
@@ -521,7 +536,7 @@ a:link {
 .img-label{
   position: fixed;
   margin: 21rem 0 0 -11.5rem;
-  background-color: var(--bright-blue);
+  background-color: var(--chocolate);
   color: var(--paper);
   padding: 0.5rem;
 }
@@ -627,7 +642,7 @@ button {
   text-decoration: none;
   outline: none;
   color: var(--paper);
-  background-color: var(--bright-blue);
+  background-color: var(--chocolate);
   border: none;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 0.063rem rgb(180, 180, 180);
@@ -717,7 +732,6 @@ button:active, button:focus {
 
 .resume>h2{ 
   flex: 0 0 15%;
-  height: 5rem;
 }
 
 .download-resume{
@@ -779,7 +793,7 @@ button:active, button:focus {
   flex: 0 1 50%;
 }
 
-h1[itemprop="name"] {
+div[itemprop="name"] {
   display: none;
 }
 
@@ -856,166 +870,6 @@ a[href^="mailto"]{
 
 /* ========================================================================= */
 
-@media screen and (max-width: 1100px){
-  :root{
-    --cubeSize:     20rem;
-  }
-
-  html {
-    display: flex;
-    width: 100%;
-  }
-
-  .img-label{
-    margin: 16rem 0 0 -9rem;
-  }
-  
-  .header-container{
-   flex: 1 1 100%;
-  }
-
-  .name-tag-bg{
-    flex: 0 1 100%
-    margin: 0 1.5rem 0 1.5rem;
-  }
- 
-
-  .nav-menu ul a{
-    font-size: 1.1rem;;
-  }
-
-  .title-block{
-    text-align: left;
-    width: 100%;
-    border-style: none none solid none;
-    font-size: 0.9rem;
-  }
-
-  .header-wrapper{
-    margin: 0 0 2rem 0;
-  }
-
-  .header-wrapper>h2{
-    font-size: 1.2rem;
-  }
-
-  #who-and-why{
-    flex-direction: column;
-    align-items:flex-start;
-    height: 70rem;
-  }
-
-  .who-and-why {
-    flex: 0 1 5%;
-  } 
-
-  .who-and-why>h2{
-    height: 2rem;
-  }
-
-  .email-and-resume-links{
-    flex: 0 1 20%;
-    width: 100%;
-    height: 1rem;
-  }
-  .about-me{
-    flex: 0 1 15%
-  }
-
-  .programming-languages{
-    flex: 0 0 5%;
-    height: 4rem;
-    width:100%;
-  }
-
-  .emailContainer{
-    flex: 0 0 50%;
-    margin: 0 0 0 5rem;
-  }
-
-  .flex-direction-change-wrap{
-    flex-direction: column;
-    justify-content: center;
-    width:30%;
-  }
-
-  .a-picture-of-me{
-    flex: 0 0 100%;
-    height: auto;
-  }
-  
-  .a-picture-of-me:hover{
-    flex: 0 0 100%;
-    height: auto;
-  }
-
-  #what-portfolio{
-    flex-direction: column;
-  }
-
-  .picture-gallery{
-    flex: 0 1 60%;
-    margin: 5rem 0 0 0;
-  }
-
-  .what-portfolio{
-    flex: 0 1 15%;
-  }
-
-  .what-portfolio>h2{
-    height: 2rem;
-  }
-
-  .cube-container{
-    margin: 5rem 0.5rem 7rem 0.5rem;
-    perspective: 400vw;
-  }
-  
-  .cube div {
-    padding: 0;
-  }
-
-
-  #resume{
-    flex-direction: column;
-  }
-
-  .resume>h2{ 
-    height: 2rem;
-  }
-
-  #when-and-how{
-    flex-direction: column;
-  }
-
-  .when-and-how>h2{ 
-    height: 2rem;
-  }
-
-  .old-school-contact-methods{
-    align-items: flex-start;
-    padding: 2rem 0 0 0;
-  }
-
-  .social-network{
-    flex: 0 1 20%;
-    align-items: center;
-    margin: 0 0 5rem 0; 
-    height: 8rem;
-  }
-
-  .social-network a div{
-    font-size: 2rem;
-  }
-
-  footer{
-    flex: 0 1 10%;
-    margin: 3rem 0 0 0;
-    min-height: 5rem;
-  }
-
-}
-
 @media screen and (max-width: 1740px){
   
   .title-block{
@@ -1035,13 +889,289 @@ a[href^="mailto"]{
     flex-direction: column;
   }
 
+  .nav-menu ul a{
+    font-size: 1.5rem;;
+  }
+
   .name-tag-bg{
-    margin: 1.5rem 0 0 1.5rem;
+    margin: 1.5rem 0 0 1.2rem;
   }
 
   header{
     margin: 7rem 0 0 0; 
   }
+
+
+
+/* ========================================================================= */
+
+@media screen and (max-width: 1330px){
+  :root{
+    --cubeSize:     15rem;
+  }
+
+  html {
+    display: flex;
+    width: 100%;
+  }
+
+  .img-label{
+    margin: 16rem 0 0 -9rem;
+  }
+  
+  .header-container{
+   flex: 0 1 50%;
+  }
+
+  .name-tag{
+    font-size: 1.5rem;
+  }
+  .name-tag-bg{
+    flex: 0 1 30%;
+    margin: 0.5rem 0.5rem 0 .5rem;
+    padding: 0;
+  }
+
+  header{
+    margin: 1.2rem 0 0 0;
+  }
+
+  nav{
+    flex: 0 1 50%;
+    height: 6rem;
+  }
+
+  .nav-menu ul a{
+    font-size: 0.8rem;;
+  }
+
+  nav li>a{    
+    margin: 0 0.25rem 0.15rem 0.25rem;
+  }
+
+  .title-block{
+    text-align: left;
+    width: 100%;
+    border-style: none none solid none;
+    font-size: 0.9rem;
+  }
+
+  .header-wrapper{
+    margin: 0 4.5rem 2rem 0;
+  }
+
+  .header-wrapper>h2{
+    font-size: 1rem;
+  }
+
+  #who-and-why{
+    flex-direction: column;
+    align-items:flex-start;
+    height: 80rem;
+  }
+
+  .who-and-why {
+    flex: 0 1 5%;
+  } 
+
+  .who-and-why>h2{
+    height: 2rem;
+  }
+
+  .email-and-resume-links{
+    flex: 0 1 20%;
+    width: 100%;
+    height: 1rem;
+  }
+  .about-me{
+    flex: 0 1 15%;
+    width: 92%;
+    margin: 0 0.75rem 0 0.75rem;
+  }
+
+  .programming-languages{
+    flex: 0 1 20%;
+    height: 3rem;
+    width:100%;
+    height: auto;
+    padding: 2rem 0 0 0;
+  }
+
+  .html5{
+    flex: 0 1 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  
+  .css3{
+    flex: 0 1 1.65rem;
+    height: 1.5rem;
+    width: 1.65rem;
+  }
+  
+  .javascript{
+    flex: 0 1 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  
+  .my-sql{
+    flex: 0 1 2.1rem;
+    height: 1.5rem;
+    width: 2.1rem;
+  }
+  
+  .node{
+    flex: 0 1 1.5rem;
+    height: 1.65rem;
+    width: 1.5rem;
+  }
+
+  .c{
+    flex: 0 1 1.5rem;
+    height: 1.65rem;
+    width: 1.5rem;
+  }
+
+  .emailContainer{
+    flex: 0 0 50%;
+    margin: 0 0 0 5rem;
+  }
+
+  .flex-direction-change-wrap{
+    flex-direction: column;
+    justify-content: center;
+    width:60%;
+    padding: 2.5rem 0 0 0;
+  }
+
+  .a-picture-of-me{
+    flex: 0 0 100%;
+    height: auto;
+  }
+  
+  .a-picture-of-me:hover{
+    flex: 0 0 100%;
+    height: auto;
+  }
+
+  #what-portfolio{
+    flex-direction: column;
+  }
+
+  .lead-image{
+    flex: 0 1 100%;
+    margin: 1rem 0 1rem 0;
+  }
+
+  .lead-image img{
+    flex: 0 1 75%;
+    width: 88vw;
+  }
+
+  .lead-image-label{
+    left: 3rem;
+    bottom: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .picture-gallery{
+    flex: 0 1 60%;
+    margin: 1rem 0 0 0;
+  }
+
+  .what-portfolio{
+    flex: 0 1 15%;
+  }
+
+  .what-portfolio>h2{
+    height: 2rem;
+  }
+
+  .picture-selector{
+    margin: 0 0 0 1.5rem;
+  }
+
+  .cube-container{
+    margin: 7rem 0.5rem 4rem 0;
+    perspective: 400vw;
+  }
+  
+  .img-label{
+    font-size: 0.8rem;
+    margin: 13rem 0 0 -7rem;
+    padding: 0.1rem;
+  }
+
+  button{
+    margin: 1rem 1rem 1rem 0;
+  }
+
+  .cube div {
+    padding: 0;
+  }
+
+  #resume{
+    flex-direction: column;
+  }
+
+  .resume{ 
+    flex: 0 1 10%;
+  }
+
+  .download-resume{
+    margin: 1.5rem 0 0 0;
+  }
+
+  .QR-code{
+    margin: 4rem 0 5rem 0;
+  }
+  
+  #when-and-how{
+    flex-direction: column;
+  }
+  
+  .title-block>h2 {
+    padding: 0 1rem 0 0;
+  }
+
+  .when-and-how>h2{ 
+    height: 1.5rem;
+  }
+
+  .old-school-contact-methods{
+    flex: 0 1 20%;
+    align-items: flex-start;
+    padding: 1rem 0 0 0;
+  }
+
+  .contact-me{
+    font-size: 0.9rem;
+  }
+
+  .social-network{
+    flex: 0 1 70%;
+    align-items: center;
+    margin: 0 0 5rem 0; 
+    height: 6rem;
+  }
+
+  .social-network>a{
+    margin: 0 1rem 0 1rem;
+  }
+
+  .social-network a div{
+    font-size: 3rem;
+  }
+
+  footer{
+    flex: 0 1 10%;
+    margin: 3rem 0 0 0;
+    min-height: 5rem;
+  }
+
+}
+
 
 }
 
