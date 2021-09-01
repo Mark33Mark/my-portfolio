@@ -1,19 +1,28 @@
 <!-- ======================================================================================
   USYD Coding Bootcamp - Unit 2 Homework Assignment
   My Portfolio Webpage
+  file commenced: 28-Aug-2021
 
-  Note: Prior to commencing the course I created and went live with a portfolio 
+  Note: Prior to commencing Bootcamp I created and went live with a portfolio 
         based website.  For this exercise I decided to stick to the brief and 
         reasonably strictly follow the example webpage in style / layout.
         I tried to have some fun with this and now think I prefer this version
         over my current live one:  https://www.watsonised.com
+        My idea with this website was to have a bit of fun and still strike the
+        balance with a website that presents professionally and one that I could
+        proudly use.  I think I got there - plenty of improvements to be made, 
+        like adding better projects to the portfolio and providing some detail on
+        what I actually did on each project.
+        I was going to add a form for email but decided not to and opted for my 
+        links that auto fill each option.  
 ===========================================================================================
 -->
 
 <!doctype html >
 <html lang="en">
+
   <head>
-    <!--- basic page needs
+    <!--- basic page needs and meta to boost SEO
     ================================================== -->
     <meta charset="utf-8">
 		<title>Mark Watson | Watsonised | developer</title>
@@ -74,14 +83,16 @@
             <li><a href="#top-of-website">Who & Why</li></a>
             <li><a href="#what-portfolio"> What </li></a>
             <li><a href="#resume">Wow (resume)</li></a>
-            <li><a href="#when-and-how">When & How</li></a>
+            <li><a href="#when-and-how">When (contact)</li></a>
           </ul>
         </div>
       </nav>
 
       <header>
         <div class="header-wrapper">
-          <h2>web developer</h2>
+          <h2 class="web-dev">web developer
+            <span class="tooltip">efficient, effective, innovative, collaborative</span> 
+          </h2>
         </div>
       </header>
     </div>
@@ -106,10 +117,10 @@
               Thanks for visiting my website.  
             </p>
             <p>
-              <strong>Who? </strong> I'm a developer of the digital space. 
-              I create assets to create an optimum user experience. From 
-              a high level or detailed briefs, I can get those bits and 
-              bytes to dance to your rhythm.
+              <strong>Who? </strong> I'm a developer of digital environments. 
+              I create assets to optimise the user experience. From 
+              high level or exceptionally specific briefs, I can get those 
+              bits and bytes to dance to your rhythm.
             </p>
             <p>
               <strong>Why? </strong> Experienced with working for large 
@@ -148,7 +159,9 @@
           <div class="empty-block"></div>
          
           <div class="flex-direction-change-wrap">
-            <div class="a-picture-of-me"> </div> 
+            <div class="a-picture-of-me">
+                <span class="tooltip">...off to do some coding.</span> 
+            </div> 
           </div>
         </article>
 
@@ -177,12 +190,12 @@
                 <h2>My portfolio... in a cube.</h2>
                 <div class="picture-selector">   
 
-                    <button class="bLeft ripple">left</button>
-                    <button class="bRight ripple">right</button>
-                    <button class="bTop ripple">top</button>
-                    <button class="bBottom ripple">bottom</button>
-                    <button class="bBack ripple">back</button>
-                    <button class="bFront ripple">front</button>
+                    <button class="bLeft ripple">javascript</button>
+                    <button class="bRight ripple">sql & php</button>
+                    <button class="bTop ripple">iot</button>
+                    <button class="bBottom ripple">e-commerce</button>
+                    <button class="bBack ripple">recreate</button>
+                    <button class="bFront ripple">web dev</button>
                 
                   <div class="cube-container">
                     <div class="cube">
@@ -208,7 +221,7 @@
         <div class="empty-cell-1-1"></div>
         <div class="empty-cell-1-2"></div>
 
-        <!-- ++++ Resume ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <!-- +++ Resume +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
         <article id="resume">  
           <div class="title-block resume">
@@ -218,13 +231,13 @@
             
             <p>Please download a copy of my resume. 
             </p>
-            <p>You can click on the QR code to download my resume or scan the QR code with your
-               device.
+            <p>You can click on the QR code or scan the QR code with your
+               device to download my resume.
             </p>
 
             <a href="https://watsonised.com/content/MarkWatson_Resume.pdf" target="_blank" 
                aria-label="download my resume by selecting this icon or use a QR scanning device to scan the QR code to download my resume.">
-              <div class="QR-code"></div>
+                  <div class="QR-code"></div>
             </a>
           </section>
         </article>
@@ -232,7 +245,7 @@
         <div class="empty-cell-1-1"></div>
         <div class="empty-cell-1-2"></div>
 
-        <!-- ++++ Contact ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <!-- +++ Contact +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
         <article id="when-and-how">  
           
@@ -241,7 +254,7 @@
           </div>
           
           <section class="contact-me">
-              <!-- adding my mobile phone number this way so that search engines 
+              <!-- adding my mobile phone number this way for search engines to 
                    find it easier, method grabbed from:
                    http://thenewcode.com/536/Adding-Phone-Numbers-To-Web-Pages-With-HTML5-and-Microdata 
                -->
@@ -287,9 +300,10 @@
       <!-- +++ Footer ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
     <footer>
-
       <div class="copyright">
-        <span>© Copyright Watsonised 2021 | All rights reserved.</span> 		        	         	
+        <br /><br />   <!-- I tried other more elegant methods however resorted 
+                            to the <br> in interest of time. -->
+        © Copyright Watsonised 2021 | All rights reserved.
       </div>		   
     </footer>
   </body>

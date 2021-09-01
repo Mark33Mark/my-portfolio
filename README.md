@@ -1,4 +1,4 @@
-![Mark Watson](./img/PNG_header_extra-clean-water_1000x459.png)
+![Mark Watson](./img/PNG_matrix-header_2560x688.png)
 # USYD-FSF Week2 Project
 ## Advanced CSS: Portfolio
 
@@ -61,21 +61,21 @@ I'm finding my number 1 resource for my CSS is the [W3 Schools website](https://
 ### 6. License  
  The works in this repository are subject to:  
 
-[![GitHub](https://img.shields.io/github/license/Mark33Mark/code-refactor-usyd-unit1)](docs/LICENSE.md)
+[![GitHub](https://img.shields.io/github/license/Mark33Mark/my-portfolio)](docs/LICENSE.md)
 
 ---
 ### 7. Github repo status  
 
-![GitHub top language](https://img.shields.io/github/languages/top/Mark33Mark/code-refactor-usyd-unit1)
-![GitHub language count](https://img.shields.io/github/languages/count/Mark33Mark/code-refactor-usyd-unit1)
-![GitHub last commit](https://img.shields.io/github/last-commit/Mark33Mark/code-refactor-usyd-unit1)
-![GitHub commit checks state](https://img.shields.io/github/checks-status/Mark33Mark/code-refactor-usyd-unit1/787dcdef0c7fbc2b3f8fdeee90943cad9161bd7f)
+![GitHub top language](https://img.shields.io/github/languages/top/Mark33Mark/my-portfolio)
+![GitHub language count](https://img.shields.io/github/languages/count/Mark33Mark/my-portfolio)
+![GitHub last commit](https://img.shields.io/github/last-commit/Mark33Mark/my-portfolio1)
+![GitHub commit checks state](https://img.shields.io/github/checks-status/Mark33Mark/my-portfolio/e09fbefe6eee5fa5a8e4f3d2a7f613845b509fc3)
 
 ---
 ### 8. How to Contribute
  If you would like to contribute, please comply with the Contributor Covenant Code of Conduct:  
 
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](docs/code_of_conduct.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](doc/code_of_conduct.md)
 
 ---
 ### 9. Tests  
