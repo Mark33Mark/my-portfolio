@@ -1000,9 +1000,11 @@ a:link {
   opacity: var(--opacity);
 }
 
-button {
+/* button:hover  */
+
+input[type=button] {
   padding: 0.5rem 0.5rem;
-  margin: 2rem 2.5rem 2rem 2.5rem;
+  margin: 0.5rem 2.5rem 2rem 2.5rem;
   font-size: 0.85rem;
   width: 8rem;
   cursor: pointer;
@@ -1021,12 +1023,16 @@ button {
    as I suspect it might what is causing issues with the 
    button function on iOS device.
 */
+/* button:hover  */
 
-button:hover {
+input[type=button]:hover {
   background-color: var(--sky-blue);
 }
 
-button:active, button:focus {
+/* button:active, button:focus  */
+
+input[type=button]:active, 
+input[type=button]:focus {
   background-color: var(--artic-blue);
   color: var(--paper);
   -webkit-box-shadow: 0 0.25rem #777;
@@ -1677,7 +1683,8 @@ a[href^="mailto"]:focus {
     padding: 0.1rem;
   }
 
-  button{
+  /* was previously button */
+  input[type=button]{
     margin: 1rem 0.5rem 1rem 0;
   }
 
