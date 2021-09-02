@@ -1015,21 +1015,19 @@ input[type=button] {
   background-color: var(--chocolate);
   border: none;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0 0.5rem 0.063rem rgb(180, 180, 180);
-          box-shadow: 0 0.5rem 0.063rem rgb(180, 180, 180);
 }
 
 /* moved ripple effect on button to exclude iOS devices
    as I suspect it might what is causing issues with the 
    button function on iOS device.
 */
-/* button:hover  */
+/* button:hover replaced wit input[] */
 
 input[type=button]:hover {
   background-color: var(--sky-blue);
 }
 
-/* button:active, button:focus  */
+/* button:active, button:focus replaced with input[] */
 
 input[type=button]:active, 
 input[type=button]:focus {
@@ -1037,11 +1035,7 @@ input[type=button]:focus {
   color: var(--paper);
   -webkit-box-shadow: 0 0.25rem #777;
           box-shadow: 0 0.25rem #777;
-  -webkit-transform: translateY(0.25rem);
-      -ms-transform: translateY(0.25rem);
-          transform: translateY(0.25rem);
 }
-
 
 .bFront:active ~.cube-container>.cube,
 .bFront:focus ~.cube-container>.cube  {
@@ -1330,8 +1324,22 @@ a[href^="mailto"]:focus {
    === 9.0 Media Queries =========================================================== */
 
 @supports not (-webkit-touch-callout:none){
-/* Added a ripple effect to the button to make the 
-   more selection interesting 
+  
+  input[type=button]{
+    -webkit-box-shadow: 0 0.5rem 0.063rem rgb(180, 180, 180);
+            box-shadow: 0 0.5rem 0.063rem rgb(180, 180, 180);
+  }
+
+  input[type=button]:active, 
+  input[type=button]:focus{
+    -webkit-transform: translateY(0.25rem);
+        -ms-transform: translateY(0.25rem);
+            transform: translateY(0.25rem);
+  }  
+
+  /* Added a ripple effect to the button to make the 
+   more selection interesting.  No longer working since
+   button changed to input[].
 */
   .ripple{
     position: relative;
@@ -1357,8 +1365,9 @@ a[href^="mailto"]:focus {
     margin-top:-5rem;
     margin-left:-5rem;
   }
-
 }
+
+/* ========================================================================= */
 
 @media screen and (max-width: 1740px){
   .title-block{
