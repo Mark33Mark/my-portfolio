@@ -1005,9 +1005,6 @@ button {
   margin: 2rem 2.5rem 2rem 2.5rem;
   font-size: 0.85rem;
   width: 8rem;
-  z-index:4;  /* recommended to get buttons to work in Safari. 
-                 The banner is z-index:5 so I'm setting this down one.
-              */
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -1020,33 +1017,10 @@ button {
           box-shadow: 0 0.5rem 0.063rem rgb(180, 180, 180);
 }
 
-/* Added a ripple effect to the button to make the 
-   more selection interesting 
+/* moved ripple effect on button to exclude iOS devices
+   as I suspect it might what is causing issues with the 
+   button function on iOS device.
 */
-.ripple{
-  position: relative;
-  overflow: hidden; 
-}
-
-.ripple:before {
-  border-radius: 50%;
-  background-color: rgba(255,255,255,0.8);
-  content:'';
-  position: absolute;
-  top: 50%; left: 50%;
-  width:0; height:0;
-}
-
-.ripple:focus:before {
-  -webkit-transition: all 2s ease-out;
-  -o-transition: all 2s ease-out;
-  transition: all 2s ease-out;
-  opacity:0;
-  width:10rem;
-  height:10rem;
-  margin-top:-5rem;
-  margin-left:-5rem;
-}
 
 button:hover {
   background-color: var(--sky-blue);
@@ -1349,6 +1323,36 @@ a[href^="mailto"]:focus {
 /* ================================================================================= 
    === 9.0 Media Queries =========================================================== */
 
+@supports not (-webkit-touch-callout:none){
+/* Added a ripple effect to the button to make the 
+   more selection interesting 
+*/
+  .ripple{
+    position: relative;
+    overflow: hidden; 
+  }
+
+  .ripple:before {
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.8);
+    content:'';
+    position: absolute;
+    top: 50%; left: 50%;
+    width:0; height:0;
+  }
+
+  .ripple:focus:before {
+    -webkit-transition: all 2s ease-out;
+    -o-transition: all 2s ease-out;
+    transition: all 2s ease-out;
+    opacity:0;
+    width:10rem;
+    height:10rem;
+    margin-top:-5rem;
+    margin-left:-5rem;
+  }
+
+}
 
 @media screen and (max-width: 1740px){
   .title-block{
