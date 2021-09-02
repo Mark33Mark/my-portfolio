@@ -1,3 +1,4 @@
+
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
   stylesheet-foundation.css
@@ -18,6 +19,12 @@
     10. Miscellaneous
 
 ---------------------------------------------------------------------------- */
+/*
+ *   Prefixed by https://autoprefixer.github.io
+ *   PostCSS: v8.3.6,
+ *   Autoprefixer: v10.3.1
+ *   Browsers: last 4 version
+ */
 
 
 /* 01. Document
@@ -28,7 +35,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-html {
+ html {
   line-height: 1.5;                /* 1 */
   -webkit-text-size-adjust: 100%;  /* 2 */
   letter-spacing: 0.02rem;
@@ -82,7 +89,8 @@ h1 {
  */
 
 hr {
-  box-sizing: content-box;  /* 1 */
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;  /* 1 */
   height: 0.063rem;         /* 1 */
   overflow: visible;        /* 3 */
   border: 0;
@@ -111,7 +119,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -327,7 +336,8 @@ fieldset {
  */
 
 legend {
-  box-sizing: border-box; /* 1 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
   display: table; /* 1 */
   max-width: 100%; /* 1 */
@@ -360,7 +370,8 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box; /* 1 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
 
@@ -490,7 +501,8 @@ summary {
       background: #fff !important;
       color: #000 !important;
       /* Black prints faster */
-      box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+              box-shadow: none !important;
       text-shadow: none !important;
     }
   
@@ -584,6 +596,7 @@ template {
   
   @media print,
     (-webkit-min-device-pixel-ratio: 1.25),
+    (-o-min-device-pixel-ratio: 5/4),
     (min-resolution: 1.25dppx),
     (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */

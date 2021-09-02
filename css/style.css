@@ -1,3 +1,4 @@
+
 /* ================================================================================= 
  *    
  *   style.css
@@ -20,8 +21,18 @@
  *  08. footer
  *  09. media queries
  *
+ * ================================================================================= 
+ *
+ *  Prefixed by https://autoprefixer.github.io
+ *  PostCSS: v8.3.6,
+ *  Autoprefixer: v10.3.1
+ *  Browsers: last 4 version
+ *
+ *  I did this after checking the website on my wife's iphone to find the buttons
+ *  were not working.  Irritating as the developer's toolkit device emulator does 
+ *  not emulate this problem.
+ *
  * ================================================================================= */
-
 
 
 /* === 1.0 Variable Declaration and Imports ======================================== */
@@ -73,54 +84,92 @@
 */
 
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 1.2rem;
   background-color: var(--paper);
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0;
   font-family: 'Poppins', sans-serif;
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex: 1;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 main > section {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 main > aside {
-  flex: 0 1 5vw;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 5vw;
+          flex: 0 1 5vw;
 }
 
 #landing-page{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .empty-cell-1-1{
   
-  flex: 0 0 15%;
+  -webkit-box-flex: 0;
+  
+      -ms-flex: 0 0 15%;
+  
+          flex: 0 0 15%;
   height: 1rem;
 }
 
 .empty-cell-1-2{
-  flex: 0 0 85%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 85%;
+          flex: 0 0 85%;
   height: 2rem;
 }
 
 footer {
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 100%;
 
   bottom: 0;
@@ -154,28 +203,50 @@ aside {
 }
 
 ul{
-  padding-inline-start: 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
 }
 
 /* === 3.0 Banner and Navigation ================================================================ */
 .header-container{
   margin: 0;
   width:100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 nav{
-  flex: 0 1 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
   width:100%;
   height: 7rem;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items:center;
-  align-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
   background: var(--chocolate);
 }
 
@@ -190,7 +261,9 @@ body .empty-block{
    update. 
 */
 nav li>a {
-  flex: 0 1 30%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 30%;
+          flex: 0 1 30%;
   font-size: 1.5rem;
   font-weight: 700;
   text-decoration: none;
@@ -199,12 +272,16 @@ nav li>a {
 }
 
 ul {
-  flex: 0 1 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
   list-style-type: none;
 }
 
 li{
-  flex: 0 1 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
   display: inline;
 }
 
@@ -219,12 +296,24 @@ nav li>a:hover{
 }
 
 header { 
-  flex: 1;
+  -webkit-box-flex: 1; 
+      -ms-flex: 1; 
+          flex: 1;
+
+  display:-webkit-box;
+
+  display:-ms-flexbox;
 
   display:flex;
-  flex-direction: row-reverse;
-  align-content: flex-end;
-  align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   width: 100%;
   height: 8rem;
   background-image: url("../img/PNG-header-particle-vector_2642x374.png");
@@ -245,7 +334,9 @@ header {
 }
 
 .name-tag{
-  flex: 0 1 20%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 20%;
+          flex: 0 1 20%;
   font-family: 'Tourney', cursive;
   padding: 0 1.5rem 0rem 1.5rem;
   font-size: 3rem;
@@ -255,6 +346,32 @@ header {
   /* I went overboard here - I've actually reduced the 
   amount of colours - was interested to see if more colours
   resulted in better transitions... it didn't. */
+  background-image: -webkit-gradient(linear, right top, left top, from(DarkViolet), 
+                                             color-stop(DarkMagenta), 
+                                             color-stop(DeepPink), 
+                                             color-stop(Blue), 
+                                             color-stop(DarkBlue), 
+                                             color-stop(DarkCyan), 
+                                             color-stop(DarkSeaGreen), 
+                                             color-stop(OliveDrab), 
+                                             color-stop(YellowGreen), 
+                                             color-stop(GoldenRod), 
+                                             color-stop(DarkOrange), 
+                                             color-stop(Crimson), 
+                                             to(FireBrick));
+  background-image: -o-linear-gradient(right, DarkViolet, 
+                                             DarkMagenta, 
+                                             DeepPink, 
+                                             Blue, 
+                                             DarkBlue, 
+                                             DarkCyan, 
+                                             DarkSeaGreen, 
+                                             OliveDrab, 
+                                             YellowGreen, 
+                                             GoldenRod, 
+                                             DarkOrange, 
+                                             Crimson, 
+                                             FireBrick);
   background-image: linear-gradient(to left, DarkViolet, 
                                              DarkMagenta, 
                                              DeepPink, 
@@ -275,7 +392,9 @@ header {
   
   color: transparent;
 
-  animation: glow 2s ease-in-out infinite alternate;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+
+          animation: glow 2s ease-in-out infinite alternate;
 }
 
 @keyframes glow {   /* CSS reads an error without having to 
@@ -327,7 +446,8 @@ header {
 }
 
 .name-tag:hover{
-  animation:none;
+  -webkit-animation:none;
+          animation:none;
 }
 
 a:visited {
@@ -356,7 +476,9 @@ a:link {
 }
 
 .web-dev>.tooltip{
-  flex: 0 1 20%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 20%;
+          flex: 0 1 20%;
   display: inline-block;
   font-size: 0.75rem;
   visibility: hidden;
@@ -385,37 +507,58 @@ a:link {
 #who-and-why{
   margin: 0;
   width:100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .who-and-why {
-  flex: 0 0 15%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%;
   width:15%;
 }
 
 .who-and-why>h2{
-  flex: 0 0 15%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%;
   height: 30rem;
 }
 
 .about-me{
-  flex: 0 1 70%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 70%;
+          flex: 0 1 70%;
   margin-left: 1.5rem;
 }
 
 .programming-languages{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   height: 8rem;
   margin: 3rem 0 0 0;
   padding-right: 1rem;
 }
 
 .html5{
-  flex: 0 1 3rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 3rem;
+          flex: 0 1 3rem;
   height: 3rem;
   width: 3rem;
   background-image: url(../img/SVG_html5_logo.svg);
@@ -424,7 +567,9 @@ a:link {
 }
 
 .css3{
-  flex: 0 1 3.3rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 3.3rem;
+          flex: 0 1 3.3rem;
   height: 3rem;
   width: 3.3rem;
   background-image: url(../img/SVG_css3_logo.svg);
@@ -433,7 +578,9 @@ a:link {
 }
 
 .javascript{
-  flex: 0 1 3rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 3rem;
+          flex: 0 1 3rem;
   height: 3rem;
   width: 3rem;
   background-image: url(../img/SVG_javascript_logo.svg);
@@ -442,7 +589,9 @@ a:link {
 }
 
 .my-sql{
-  flex: 0 1 4rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 4rem;
+          flex: 0 1 4rem;
   height: 3rem;
   width: 4rem;
   background-image: url(../img/SVG_mySQL_logo.svg);
@@ -451,7 +600,9 @@ a:link {
 }
 
 .node{
-  flex: 0 1 3rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 3rem;
+          flex: 0 1 3rem;
   height: 3.2rem;
   width: 3rem;
   background-image: url(../img/SVG_node_logo.svg);
@@ -460,7 +611,9 @@ a:link {
 }
 
 .c{
-  flex: 0 1 3rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 3rem;
+          flex: 0 1 3rem;
   height: 3.2rem;
   width: 3rem;
   background-image: url(../img/SVG_c_logo.svg);
@@ -469,14 +622,24 @@ a:link {
 }
 
 .email-and-resume-links{
-  flex: 0 1 20%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 20%;
+          flex: 0 1 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column; 
-  align-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; 
+  -ms-flex-line-pack: distribute; 
+      align-content: space-around;
 }
 
 .emailContainer{
-  flex: 0 1 20%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 20%;
+          flex: 0 1 20%;
   height: 4rem;
   width: 4rem;
   background-image: url( ../img/SVG_myEmail.svg);
@@ -491,12 +654,26 @@ a:link {
 }
 
 .flex-direction-change-wrap{
-  flex: 0 0 30%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  flex-direction: row;
-  justify-content: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
   margin: 3rem 0 0 0;
   background-color: gray;  /* just in case this is not supported by users browser */
+  background-image: -o-radial-gradient(20% 10%,
+                                              farthest-corner,
+                                              var(--rocks-dark),
+                                              var(--sand-light),
+                                              var(--paper));
   background-image: radial-gradient(farthest-corner at 20% 10%,
                                               var(--rocks-dark),
                                               var(--sand-light),
@@ -509,7 +686,9 @@ a:link {
 }
 
 .a-picture-of-me{
-  flex: 0 1 60%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
   position: relative;
   height: 40rem;
   background-image: url(../img/PNG_Me_210828_modded.png);
@@ -539,7 +718,9 @@ a:link {
 }
 
 .tooltip{
-  flex: 0 1 10%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 10%;
+          flex: 0 1 10%;
   font-size: 0.75rem;
   visibility: hidden;
   position: absolute;
@@ -570,35 +751,55 @@ a:link {
 
 #what-portfolio{
   width:100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .what-portfolio{
-  flex: 0 0 15%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%;
   width:10%;
 }
 
 .what-portfolio>h2{
-  flex:0 0 15%;
+  -webkit-box-flex:0;
+      -ms-flex:0 0 15%;
+          flex:0 0 15%;
   height: auto;
 }
 
 .my-portfolio{
-  flex: 0 0 70%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .lead-image{
-  flex: 0 1 70%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 70%;
+          flex: 0 1 70%;
   position: relative;
   text-align: center;
   margin: 3rem 0 1rem 3.5rem;
 }
 
 .lead-image img{
-  flex: 1 1 70%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 70%;
+          flex: 1 1 70%;
   width: 72vw;
   height: auto;
   max-height: 40rem;
@@ -633,13 +834,17 @@ a:link {
   */
 
 .picture-gallery{
-  flex: 0 0 85%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 85%;
+          flex: 0 0 85%;
   text-align: center;
   margin: 5rem 0 0 0;
 }
 
 .picture-selector{
-  flex: 0 0 85%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 85%;
+          flex: 0 0 85%;
   width:80%;
   margin: 0 0 0 4rem;
   text-align: center;
@@ -651,8 +856,10 @@ a:link {
 
 .cube-container{
 	margin: 6rem 1rem 7rem 5rem;
-	perspective: 150vw;
-	perspective-origin: 150% 200%;
+	-webkit-perspective: 150vw;
+	        perspective: 150vw;
+	-webkit-perspective-origin: 150% 200%;
+	        perspective-origin: 150% 200%;
 }
 
 .cube {
@@ -665,14 +872,23 @@ a:link {
   -ms-transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
 
+  -webkit-transition: -webkit-transform 1s;
+
+  transition: -webkit-transform 1s;
+
+  -o-transition: transform 1s;
+
   transition: transform 1s;
+
+  transition: transform 1s, -webkit-transform 1s;
   -webkit-transition: transform 1s;
   -ms-transition: transform 1s;
 }
 
 .cube div {
   position: absolute;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0.25rem;
   height: 100%;
   width: 100%;
@@ -797,7 +1013,8 @@ button {
   background-color: var(--chocolate);
   border: none;
   border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 0.063rem rgb(180, 180, 180);
+  -webkit-box-shadow: 0 0.5rem 0.063rem rgb(180, 180, 180);
+          box-shadow: 0 0.5rem 0.063rem rgb(180, 180, 180);
 }
 
 /* Added a ripple effect to the button to make the 
@@ -818,6 +1035,8 @@ button {
 }
 
 .ripple:focus:before {
+  -webkit-transition: all 2s ease-out;
+  -o-transition: all 2s ease-out;
   transition: all 2s ease-out;
   opacity:0;
   width:10rem;
@@ -833,39 +1052,48 @@ button:hover {
 button:active, button:focus {
   background-color: var(--artic-blue);
   color: var(--paper);
-  box-shadow: 0 0.25rem #777;
-  transform: translateY(0.25rem);
+  -webkit-box-shadow: 0 0.25rem #777;
+          box-shadow: 0 0.25rem #777;
+  -webkit-transform: translateY(0.25rem);
+      -ms-transform: translateY(0.25rem);
+          transform: translateY(0.25rem);
 }
 
 
 .bFront:active ~.cube-container>.cube,
 .bFront:focus ~.cube-container>.cube  {
-  transform: rotateY(0deg); 
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg); 
 }
 
 .bLeft:active ~.cube-container>.cube,
 .bLeft:focus ~.cube-container>.cube{
-  transform: rotateY(calc(var(--cube-tran)*0.25)); 
+  -webkit-transform: rotateY(calc(var(--cube-tran)*0.25));
+          transform: rotateY(calc(var(--cube-tran)*0.25)); 
 }
 
 .bRight:active ~.cube-container>.cube,
 .bRight:focus ~.cube-container>.cube {
-  transform: rotateY(calc(var(--cube-tran)*-0.25)); 
+  -webkit-transform: rotateY(calc(var(--cube-tran)*-0.25));
+          transform: rotateY(calc(var(--cube-tran)*-0.25)); 
 }
 
 .bTop:active ~.cube-container>.cube,
 .bTop:focus ~.cube-container>.cube {
-  transform: rotateX(calc(var(--cube-tran)*-0.25)); 
+  -webkit-transform: rotateX(calc(var(--cube-tran)*-0.25));
+          transform: rotateX(calc(var(--cube-tran)*-0.25)); 
 }
 
 .bBottom:active ~.cube-container>.cube,
 .bBottom:focus ~.cube-container>.cube {
-  transform: rotateX(calc(var(--cube-tran)*0.25)); 
+  -webkit-transform: rotateX(calc(var(--cube-tran)*0.25));
+          transform: rotateX(calc(var(--cube-tran)*0.25)); 
 }
 
 .bBack:active ~.cube-container>.cube, 
 .bBack:focus ~.cube-container>.cube {
-  transform: rotateY(calc(var(--cube-tran)*0.5)); 
+  -webkit-transform: rotateY(calc(var(--cube-tran)*0.5));
+          transform: rotateY(calc(var(--cube-tran)*0.5)); 
 }
 
 .slidecontainer {
@@ -877,27 +1105,40 @@ button:active, button:focus {
 
 #resume{
   margin:0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width:100%;
 }
 
 .resume{
-  flex: 0 0 15%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%;
 }
 
 .resume>h2{ 
-  flex: 0 0 15%;
+  -webkit-box-flex: 0; 
+      -ms-flex: 0 0 15%; 
+          flex: 0 0 15%;
 }
 
 .download-resume{
-  flex: 0 0 85%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 85%;
+          flex: 0 0 85%;
   text-align: center;
   margin: 5rem 0 0 0;
 }
 
 .QR-code{
-  flex: 0 0 85%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 85%;
+          flex: 0 0 85%;
   background-image: url(../img/SVG_qr-code_ver2.svg);
   height: 10rem;
   text-align:center;
@@ -914,34 +1155,57 @@ button:active, button:focus {
  */
 .QR-code:hover,
 .QR-code:focus{
-  transform: scale(2, 2);
+  -webkit-transform: scale(2, 2);
+      -ms-transform: scale(2, 2);
+          transform: scale(2, 2);
 }
 
 /* === 7.0 Contact ================================================================= */
 
 #when-and-how{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width:100%;
 }
 
 .when-and-how{
-  flex: 0 0 15%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%;
   width:10%;
 }
 
 .when-and-how>h2{ 
-  flex: 0 0 15%;
+  -webkit-box-flex: 0; 
+      -ms-flex: 0 0 15%; 
+          flex: 0 0 15%;
   height: 5rem;
 }
 
 .contact-me{
-  flex: 0 0 90%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 90%;
+          flex: 0 0 90%;
+  
+  display: -webkit-box;
+  
+  display: -ms-flexbox;
   
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 
   font-size: 1.2rem;
   font-style: normal;
@@ -949,14 +1213,22 @@ button:active, button:focus {
 }
 
 .old-school-contact-methods{
-  flex: 0 0 90%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 90%;
+          flex: 0 0 90%;
   margin: 3rem 0 1.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .address{
-  flex: 0 1 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
 }
 
 /* I did this to hide my name but thought I'd keep
@@ -969,7 +1241,9 @@ div[itemprop="name"] {
 }
 
 span[itemprop="telephone"] {
-  flex: 0 0 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
  
   color:var(--chocolate);
   font-style: normal;
@@ -980,7 +1254,9 @@ span[itemprop="telephone"] {
 }
 
 a[href^="tel:+61448488884"]{
-  flex: 0 0 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
   color:var(--chocolate);
 }
 
@@ -990,7 +1266,9 @@ a[href^="tel:+61448488884"]:focus {
 }
 
 a[href^="mailto"]{
-  flex: 0 0 10%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 10%;
+          flex: 0 0 10%;
 
   color:var(--chocolate);
   border-style: none none solid none;
@@ -1005,7 +1283,13 @@ a[href^="mailto"]:focus {
 }
 
 .social-network{
-  flex: 0 0 70%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
 
   display: flex;
 
@@ -1020,7 +1304,9 @@ a[href^="mailto"]:focus {
 }
 
 .social-network>a {
-  flex: 0 1 40%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
   color:var(--chocolate);
   margin: 0 3rem 0 3rem;
   font-size: 4rem;
@@ -1049,7 +1335,9 @@ a[href^="mailto"]:focus {
 */
 
 .copyright{
-  flex: 0 0 90%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 90%;
+          flex: 0 0 90%;
   font-size: 0.75rem;
   color: var(--paper);
   margin: 0;
@@ -1069,12 +1357,20 @@ a[href^="mailto"]:focus {
   }
 
   nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
     height:10rem;
     max-height: 15rem;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .nav-menu ul a{
@@ -1120,6 +1416,8 @@ a[href^="mailto"]:focus {
   }
 
   html {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
   }
@@ -1131,14 +1429,18 @@ a[href^="mailto"]:focus {
   }
   
   .header-container{
-   flex: 0 1 50%;
+   -webkit-box-flex: 0;
+       -ms-flex: 0 1 50%;
+           flex: 0 1 50%;
   }
 
   .name-tag{
     font-size: 1.5rem;
   }
   .name-tag-bg{
-    flex: 0 1 30%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 30%;
+            flex: 0 1 30%;
     margin: 0.5rem 0.5rem 0 .5rem;
     padding: 0;
   }
@@ -1148,7 +1450,9 @@ a[href^="mailto"]:focus {
   }
 
   nav{
-    flex: 0 1 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
     height: 6rem;
   }
 
@@ -1168,7 +1472,7 @@ a[href^="mailto"]:focus {
   }
 
   .header-wrapper{
-    margin: 0 3rem 2rem 0;
+    margin: 0 1rem 2rem 0;
   }
 
   .header-wrapper>h2{
@@ -1181,13 +1485,20 @@ a[href^="mailto"]:focus {
 
 /* -- who I am ---- */
   #who-and-why{
-    flex-direction: column;
-    align-items:flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align:start;
+        -ms-flex-align:start;
+            align-items:flex-start;
     height: 90rem;
   }
 
   .who-and-why {
-    flex: 0 1 5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 5%;
+            flex: 0 1 5%;
   } 
 
   .who-and-why>h2{
@@ -1195,13 +1506,17 @@ a[href^="mailto"]:focus {
   }
 
   .about-me{
-    flex: 0 1 15%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 15%;
+            flex: 0 1 15%;
     width: 92%;
     margin: 0 0.75rem 0 0.75rem;
   }
 
   .programming-languages{
-    flex: 0 1 20%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 20%;
+            flex: 0 1 20%;
     height: 3rem;
     width:100%;
     height: auto;
@@ -1209,56 +1524,77 @@ a[href^="mailto"]:focus {
   }
 
   .html5{
-    flex: 0 1 1.5rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 1.5rem;
+            flex: 0 1 1.5rem;
     height: 1.5rem;
     width: 1.5rem;
   }
   
   .css3{
-    flex: 0 1 1.65rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 1.65rem;
+            flex: 0 1 1.65rem;
     height: 1.5rem;
     width: 1.65rem;
   }
   
   .javascript{
-    flex: 0 1 1.5rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 1.5rem;
+            flex: 0 1 1.5rem;
     height: 1.5rem;
     width: 1.5rem;
   }
   
   .my-sql{
-    flex: 0 1 2.1rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 2.1rem;
+            flex: 0 1 2.1rem;
     height: 1.5rem;
     width: 2.1rem;
   }
   
   .node{
-    flex: 0 1 1.5rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 1.5rem;
+            flex: 0 1 1.5rem;
     height: 1.65rem;
     width: 1.5rem;
   }
 
   .c{
-    flex: 0 1 1.5rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 1.5rem;
+            flex: 0 1 1.5rem;
     height: 1.65rem;
     width: 1.5rem;
   }
 
   .emailContainer{
-    flex: 0 0 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
     margin: 0 0 0 5rem;
   }
 
   .flex-direction-change-wrap{
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width:60%;
     margin: 3rem 0 0 15%;
     padding: 2.5rem 0 0 0;
   }
 
   .a-picture-of-me{
-    flex: 0 0 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     height: auto;
     margin: 0 0 5% 30%;
   }
@@ -1275,16 +1611,23 @@ a[href^="mailto"]:focus {
 
 /* -- portfolio (gallery) ---- */
   #what-portfolio{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .lead-image{
-    flex: 0 1 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
     margin: 1rem 0 1rem 0;
   }
 
   .lead-image img{
-    flex: 0 1 75%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 75%;
+            flex: 0 1 75%;
     width: 88vw;
   }
 
@@ -1295,12 +1638,16 @@ a[href^="mailto"]:focus {
   }
 
   .picture-gallery{
-    flex: 0 1 60%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 60%;
+            flex: 0 1 60%;
     margin: 1rem 0 0 0;
   }
 
   .what-portfolio{
-    flex: 0 1 15%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 15%;
+            flex: 0 1 15%;
   }
 
   .what-portfolio>h2{
@@ -1313,7 +1660,8 @@ a[href^="mailto"]:focus {
 
   .cube-container{
     margin: 7rem 0.5rem 4rem 0;
-    perspective: 400vw;
+    -webkit-perspective: 400vw;
+            perspective: 400vw;
   }
   
   .img-label{
@@ -1332,11 +1680,16 @@ a[href^="mailto"]:focus {
 
 /* -- resume ---- */
   #resume{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .resume{ 
-    flex: 0 1 10%;
+    -webkit-box-flex: 0; 
+        -ms-flex: 0 1 10%; 
+            flex: 0 1 10%;
   }
 
   .download-resume{
@@ -1348,7 +1701,10 @@ a[href^="mailto"]:focus {
   }
   
   #when-and-how{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   
   .title-block>h2 {
@@ -1361,8 +1717,12 @@ a[href^="mailto"]:focus {
   }
 
   .old-school-contact-methods{
-    flex: 0 1 20%;
-    align-items: flex-start;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 20%;
+            flex: 0 1 20%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     padding: 1rem 0 0 0;
   }
 
@@ -1371,8 +1731,12 @@ a[href^="mailto"]:focus {
   }
 
   .social-network{
-    flex: 0 1 70%;
-    align-items: center;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 70%;
+            flex: 0 1 70%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 0 0 5rem 0; 
     height: 5rem;
   }
@@ -1388,7 +1752,9 @@ a[href^="mailto"]:focus {
 
 /* -- footer ---- */
   footer{
-    flex: 0 1 10%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 10%;
+            flex: 0 1 10%;
     margin: 0;
     min-height: 5rem;
   }
