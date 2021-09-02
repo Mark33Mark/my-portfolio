@@ -37,7 +37,7 @@
 
 /* === 1.0 Variable Declaration and Imports ======================================== */
 
-@import url("icomoon/iconfonts.css");
+@import url("icomoon/iconfonts.css");   /* Includes fonts I've created myself in Inkscape */
 
 :root{
   /* declared color variables to lock in style */
@@ -1005,6 +1005,9 @@ button {
   margin: 2rem 2.5rem 2rem 2.5rem;
   font-size: 0.85rem;
   width: 8rem;
+  z-index:4;  /* recommended to get buttons to work in Safari. 
+                 The banner is z-index:5 so I'm setting this down one.
+              */
   cursor: pointer;
   text-align: center;
   text-decoration: none;
