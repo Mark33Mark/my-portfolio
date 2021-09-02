@@ -23,6 +23,8 @@
 **Why this project?**  
 * To find employment it is essential to have a good portfolio of projects that demonstrates my capability as a developer. 
 
+![my webpage](./img/JPG_Webpage_210902.jpeg)
+
 **What problem does this project solve?**  
 * Responsive website using the CSS flexbox property.
 
@@ -30,6 +32,7 @@
 * This project helped me get my head around how to manage 'flexbox' when setting up my website. The true strength of flexbox is doing a number of sub-flexboxes to achieve your desired layout.
 * A wireframe was started for this project however I used the homework brief example to structure my webpage.  In future, time permitting, I will make sure I have completed the wireframe exercise.
 * I lost lots of time running into snags in this project.  I need to improve working faster initially and doing refinement once the webpage is roughed in. Currently I've found I get really distracted with my layout and then later I decide to drop another object in and then need to go back and re-layout.
+* Discovered compatability issues that were not emulated on my browser's developer device emulator.  Something to watch out for.  Main issue is I discovered buttons are not working on iPhones.  I've swept my CSS with Autoprefixer to fix.
 
 ---
 ### 2. Features  
@@ -79,7 +82,11 @@ I'm finding my number 1 resource for my CSS is the [W3 Schools website](https://
 
 ---
 ### 9. Tests  
-No tests will be provided for this project as it is limited to HTML and CSS files. 
+- Opened on a Samsung Note 10+ and experienced full functionality and responsive behaviour was as expected.
+- Opened on a Apple iPhone X - buttons not working or tooltips.  Swept my CSS with Autoprefixer but behaviour unchanged.  Did a web search and could not find any reasonable solutions, one site suggested moving buttons higher with z-index property but didn't try as it seems illogical and will interfere with the fixed navigation header.
+- Ran the Google mobile friendly test and got the ok:
+
+![Google mobile friendly test passed](./img/JPG_Screengrab_Google-mobile-friendly-test-PASSED.jpg)
 
 ---
 ### 10. Checklist  
