@@ -71,7 +71,7 @@ I'm finding my number 1 resource for my CSS is the [W3 Schools website](https://
 
 ![GitHub top language](https://img.shields.io/github/languages/top/Mark33Mark/my-portfolio)
 ![GitHub language count](https://img.shields.io/github/languages/count/Mark33Mark/my-portfolio)
-![GitHub last commit](https://img.shields.io/github/last-commit/Mark33Mark/my-portfolio1)
+![GitHub last commit](https://img.shields.io/github/last-commit/Mark33Mark/my-portfolio)
 ![GitHub commit checks state](https://img.shields.io/github/checks-status/Mark33Mark/my-portfolio/e09fbefe6eee5fa5a8e4f3d2a7f613845b509fc3)
 
 ---
